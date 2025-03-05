@@ -1,6 +1,15 @@
 import "./App.css";
 import teams from "./CollegeBasketballTeams.json";
 
+function Header() {
+  return (
+    <>
+      <h1>Welcome to March Madness</h1>
+      <h5>Choose your team:</h5>
+    </>
+  );
+}
+
 function TeamList({
   school,
   name,
@@ -27,9 +36,7 @@ function TeamList({
 function App() {
   return (
     <>
-      <h1>Welcome to March Madness</h1>
-      <h5>Choose your team:</h5>
-
+      <Header />
       {teams.teams.map((oneTeam) => (
         <TeamList
           school={oneTeam.school}
